@@ -1,7 +1,10 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
 class C_admin extends CI_Controller {
+
     function __construct(){
+        define('PANJANG', 'mm');
+        define('BERAT', 'gram');
             parent::__construct();
             // cek session yang login, jika session status tidak sama dengan session admin_login,maka halaman akan di alihkan kembali ke halaman login.
                 if($this->session->userdata('status')!="admin_login"){
@@ -14,6 +17,19 @@ class C_admin extends CI_Controller {
         $this->load->view('admin/v_index');
         $this->load->view('admin/v_footer');
 
+    }
+//untuk menampilkan ke halaman produk 
+    function produk(){
+        $data['catalog'] = $this->m_data->get_data('catalog_list')->result();
+        $this->load->view('admin/v_header');
+        $this->load->view('admin/v_produk', $data);
+        $this->load->view('admin/v_footer');
+    }
+//untuk menampilkan ke halaman produk 
+    function produk_baru(){
+        $this->load->view('admin/v_header');
+        $this->load->view('admin/v_produk_baru');
+        $this->load->view('admin/v_footer');
     }
 //fungsi untuk membuat user admin logout
     function logout(){
@@ -153,44 +169,5 @@ class C_admin extends CI_Controller {
     // }
 
     //***************************************************** */ PRODUCT*********************************************************
-    // function buku(){
-    //     // mengambil data dari database
-    //     $data['buku'] = $this->m_data->get_data('buku')->result();
-    //     $this->load->view('admin/v_header');
-    //     $this->load->view('admin/v_buku',$data);
-    //     $this->load->view('admin/v_footer');
-    // }
-        
-    // //laporan pminjaan
-    // function peminjaman_laporan(){
-    //     if(isset($_GET['tanggal_mulai']) && isset($_GET['tanggal_sampai'])){
-    //         $mulai = $this->input->get('tanggal_mulai');
-    //         $sampai = $this->input->get('tanggal_sampai');
-    //     // mengambil data peminjaman berdasarkan tanggal mulai sampai tanggal sampai
-    //     $data['data_peminjaman'] = $this->db->query("SELECT * from peminjaman,buku,anggota where peminjaman.peminjaman_buku=buku.id and
-    //                                                 peminjaman.peminjaman_anggota=anggota.id and date(peminjaman_tanggal_mulai) >='$mulai' 
-    //                                                 and date(peminjaman_tanggal_sampai) <= '$sampai' order by peminjaman_id desc")->result();
-    //     }else{
-    //     // mengambil data peminjaman buku dari database | dan mengurutkan data dari id peminjaman terbesar ke terkecil (desc)
-    //     $data['data_peminjaman'] = $this->db->query("SELECT * from peminjaman,buku,anggota where peminjaman.peminjaman_buku=buku.id and
-    //                                             peminjaman.peminjaman_anggota=anggota.id order by peminjaman_id desc")->result();
-    //     }
-    //     $this->load->view('admin/v_header');
-    //     $this->load->view('admin/v_peminjaman_laporan',$data);
-    //     $this->load->view('admin/v_footer');
-    // }
-
-    // function peminjaman_cetak(){
-    //     if(isset($_GET['tanggal_mulai']) && isset($_GET['tanggal_sampai'])){
-    //         $mulai = $this->input->get('tanggal_mulai');
-    //         $sampai = $this->input->get('tanggal_sampai');
-    //     // mengambil data peminjaman berdasarkan tanggal mulai sampai tanggal sampai
-    //     $data['data_peminjaman'] = $this->db->query("SELECT * from peminjaman,buku,anggota where peminjaman.peminjaman_buku=buku.id and
-    //                                                 peminjaman.peminjaman_anggota=anggota.id and date(peminjaman_tanggal_mulai) >='$mulai' 
-    //                                                 and date(peminjaman_tanggal_sampai) <= '$sampai' order by peminjaman_id desc")->result();
-    //     $this->load->view('admin/v_peminjaman_cetak',$data);
-    //     }else{
-    //         redirect(base_url().'c_admin/peminjaman');
-    //     }
-    // }
+    
 }

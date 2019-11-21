@@ -20,7 +20,7 @@
                 </div>
                 <div class="form-group">
                     <label class="font-weight-bold" for="password">Password</label>
-                    <input type="text" class="form-control" name="password" placeholder="Masukan password" required="required">
+                    <input type="password" class="form-control" name="password" placeholder="Masukan password" required="required">
                 </div>
                 <input type="submit" class="btn btn-primary" value="Simpan">
             </form>

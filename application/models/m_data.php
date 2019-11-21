@@ -28,6 +28,11 @@ class M_data extends CI_Model{
         function delete_data($where,$table){
             $this->db->delete($table,$where);
         }
+    // fungsi untuk manual query
+        function raw_query($query){
+            $data = $this->db->query($query);
+            return $data;
+        }
     // AKHIR FUNGSI CRUD
 
 }

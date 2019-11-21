@@ -95,7 +95,6 @@
 			$this->load->view('petugas/v_edit_anggota',$data);
 			$this->load->view('petugas/v_footer');
 
-
 		}
 
 		function anggota_update(){
