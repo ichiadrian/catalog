@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container-fluid">
     <div class="jumbotron text-center">
         <div class="col-sm-8 mx-auto">
             <h1>Selamat datang!</h1>
