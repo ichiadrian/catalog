@@ -15,7 +15,7 @@
 
                     <br /><br />
 
-                    <form action="<?php echo site_url() . 'c_admin/produk_tambah_aksi' ?>" method="post" enctype="multipart/form-data">
+                    <form action="<?php echo site_url() . 'c_admin/produk_tambah_baru' ?>" method="post">
                         <div class="form-group">
                             <label class="font-weight-bold" for="nama_barang">Nama Barang</label>
                             <input type="text" class="form-control" name="nama_barang" placeholder="Masukan Nama Barang" required="required">
@@ -42,10 +42,8 @@
                         </div>
                         <div class="form-group">
                             <label class="font-weight-bold" for="gambar">Gambar</label>
-                            <input type="file" class="form-control " accept="image/*" id="gambar" name="gambar" required="required">
+                            <input type="file" class="form-control " accept="image/*" name="gambar" required="required">
                         </div>
-                        <img id="showimage" src="#" hidden/>
-                        <br>
                         <input type="submit" class="btn btn-primary" value="Simpan">
                     </form>
 
@@ -55,22 +53,3 @@
     </div>
 
 </div>
-
-<script>
-    function readURL(input) {
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
-
-            reader.onload = function(e) {
-                $('#showimage').attr('src', e.target.result);
-                $('#showimage').removeAttr('hidden');
-            }
-
-            reader.readAsDataURL(input.files[0]);
-        }
-    }
-
-    $("#gambar").change(function() {
-        readURL(this);
-    });
-</script>

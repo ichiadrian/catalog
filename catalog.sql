@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 22, 2019 at 04:31 PM
+-- Generation Time: Nov 22, 2019 at 12:30 AM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.2
 
@@ -48,7 +48,7 @@ INSERT INTO `admin` (`id`, `username`, `password`) VALUES
 --
 
 CREATE TABLE `catalog_list` (
-  `id` bigint(20) UNSIGNED NOT NULL,
+  `id` bigint(20) NOT NULL,
   `nama_barang` varchar(25) NOT NULL,
   `gambar` varchar(50) NOT NULL,
   `deskripsi` text NOT NULL,
@@ -56,7 +56,7 @@ CREATE TABLE `catalog_list` (
   `lebar` int(11) NOT NULL,
   `tebal` int(11) NOT NULL,
   `berat` int(11) NOT NULL,
-  `tanggal_input` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `tanggal_input` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -64,7 +64,7 @@ CREATE TABLE `catalog_list` (
 --
 
 INSERT INTO `catalog_list` (`id`, `nama_barang`, `gambar`, `deskripsi`, `tinggi`, `lebar`, `tebal`, `berat`, `tanggal_input`) VALUES
-(6, 'Test', '9234_20140615021922.jpg', 'Test Desc', 12, 12, 12, 12, '2019-11-22 15:05:39');
+(1, 'Emas Batangan', 'emas.jpg', 'Emas seberat 500 gram', 5, 2, 6, 500, '2019-11-20 17:00:00');
 
 -- --------------------------------------------------------
 
@@ -86,7 +86,7 @@ CREATE TABLE `petugas` (
 INSERT INTO `petugas` (`id`, `nama`, `username`, `password`) VALUES
 (2, 'Ryan Septianto', 'ryan', '570c396b3fc856eceb8aa7357f32af1a'),
 (3, 'wahyu', 'wahyu', '827ccb0eea8a706c4c34a16891f84e7b'),
-(5, 'Armand Iskandarsyah', 'armands', 'd138f04ec7016a21acc2ae19ddc708bc');
+(4, 'Armand Iskandarsyah', 'armand', 'd138f04ec7016a21acc2ae19ddc708bc');
 
 --
 -- Indexes for dumped tables
@@ -124,13 +124,13 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `catalog_list`
 --
 ALTER TABLE `catalog_list`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `petugas`
 --
 ALTER TABLE `petugas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
