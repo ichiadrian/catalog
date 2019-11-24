@@ -22,6 +22,7 @@ class C_admin extends CI_Controller {
         $this->load->view('admin/v_index', $data);
         $this->load->view('admin/v_footer');
     }
+
     //untuk menampilkan ke halaman produk 
     function produk(){
         $data['catalog'] = $this->m_data->get_data('catalog_list')->result();
@@ -29,27 +30,39 @@ class C_admin extends CI_Controller {
         $this->load->view('admin/v_produk', $data);
         $this->load->view('admin/v_footer');
     }
+
     // untuk edit data produk
     function produk_edit($id){
         $where = array('id'=> $id);
         $data['data_catalog'] = $this->m_data->edit_data($where,'catalog_list')->result();
-
         $this->load->view('admin/v_header');
         $this->load->view('admin/v_produk_edit',$data);
         $this->load->view('admin/v_footer'); 
     }
+
+    // untuk view data produk
+    function produk_view($id){
+        $where = array('id'=> $id);
+        $data['data_catalog'] = $this->m_data->edit_data($where,'catalog_list')->result();
+        $this->load->view('admin/v_header');
+        $this->load->view('admin/v_produk_view',$data);
+        $this->load->view('admin/v_footer'); 
+    }
+
     //untuk menampilkan ke halaman produk 
     function produk_baru(){
         $this->load->view('admin/v_header');
         $this->load->view('admin/v_produk_baru');
         $this->load->view('admin/v_footer');
     }
+
     // menampilkan form ganti password user
     function ganti_password(){
         $this->load->view('admin/v_header');
         $this->load->view('admin/v_ganti_password');
         $this->load->view('admin/v_footer');
     }
+
     //Untuk edit data petugas user
     function petugas_edit($id){
         $where = array('id'=> $id);
@@ -283,8 +296,6 @@ class C_admin extends CI_Controller {
     //     $this->load->view('admin/v_anggota_kartu',$data);
 
     // }
-
-    //***************************************************** */ PRODUCT*********************************************************
 
     // ===================================================== END OF AKSI ===================================================== \\
     
