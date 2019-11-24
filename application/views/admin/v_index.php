@@ -19,7 +19,7 @@
             foreach ($catalog as $key => $val) {
                     
         ?>
-            <a class="card col-2 m-2" style="text-decoration: none;" href="<?php echo site_url()."c_admin/produk_view/".$val->id; ?>">
+            <a class="card col-2 m-2" style="text-decoration: none;" href="<?php echo site_url()."c_petugas/produk_view/".$val->id; ?>">
                 <div class="card-body">
                     <img class="d-flex justify-content-center" width="150px" height="100px" src="../gambar/produk_catalog/<?php echo $val->gambar; ?>" alt="">
                     <hr>
