@@ -14,10 +14,11 @@ class C_admin extends CI_Controller {
 
     //untuk menampilkan ke halaman dashboard
     public function index(){
+        $query = "SELECT * FROM catalog_list ORDER BY tanggal_input DESC LIMIT 10";
+        $data['catalog'] = $this->m_data->raw_query($query)->result();
         $this->load->view('admin/v_header');
-        $this->load->view('admin/v_index');
+        $this->load->view('admin/v_index', $data);
         $this->load->view('admin/v_footer');
-
     }
     //untuk menampilkan ke halaman produk 
     function produk(){
