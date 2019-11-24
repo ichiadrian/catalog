@@ -43,7 +43,7 @@
                             <label class="font-weight-bold" for="gambar">Gambar</label>
                             <input type="file" class="form-control " accept="image/*" id="gambar" name="gambar" required="required">
                         </div>
-                        <img id="showimage" src="#" hidden/>
+                        <img id="showimage" src="#" hidden style="max-width: 300px; max-height: 300px;"/>
                         <br>
                         <input type="submit" class="btn btn-primary" value="Simpan">
                     </form>

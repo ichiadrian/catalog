@@ -2,17 +2,24 @@
 <div class="container-fluid">
 
     <div class="row mx-5">
-        <div class="col-1"></div>
         <div class="col-4">
-            <img class="img-thumbnail" src="<?php echo site_url()."gambar/produk_catalog/".$data_catalog->gambar; ?>" alt="">
+            <img class="shadow" width="377px" height="292px" src="<?php echo site_url()."gambar/produk_catalog/".$data_catalog->gambar; ?>" alt="">
         </div>
-        <div class="card col-6 p-3">
-            <h3 class="mb-0"><?php echo strtoupper($data_catalog->nama_barang); ?></h3>
+        <div class="shadow card col-7 p-3 ml-5">
+            <div class="row">
+                <h3 class="col"><?php echo strtoupper($data_catalog->nama_barang); ?> </h3>
+                <div class="col d-flex justify-content-end">
+                    <a href="<?php echo site_url().'c_petugas/produk' ?>" class=" btn btn-light btn-outline-dark pull-right">
+                        <i class="fa fa-arrow-left"></i>
+                        Kembali
+                    </a>
+                </div>
+            </div>
             <hr>
             <h5> <b>Deskripsi</b> </h5>
             <p class="ml-3"><?php echo $data_catalog->deskripsi; ?></p>
 
-            <table width="20%">
+            <table width="25%" style="font-weight: bold">
 
                 <tr>
                     <td>Tinggi</td>
@@ -38,7 +45,6 @@
             </table>
 
         </div>
-        <div class="col-1"></div>
     </div>
 
 </div>

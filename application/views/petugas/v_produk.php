@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid mb-5">
 
     <div class="row mb-3">
         <div class="col d-flex justify-content-end">
@@ -6,7 +6,7 @@
         </div>
     </div>
 
-    <table class="table table-striped">
+    <table class="table table-striped table-datatable">
         <thead class="thead-dark">
             <tr>
                 <th class="text-center">No</th>
@@ -39,11 +39,11 @@
                 <td class="text-center"><?php echo $cat->tebal.' '.PANJANG; ?> </td>
                 <td class="text-center"><?php echo $cat->berat.' '.BERAT; ?></td>
                 <td class="text-center"><?php echo date('d M Y', strtotime($cat->tanggal_input)); ?></td>
-                <td class="text-center">
+                <td class="text-center"> 
                     <a class="btn btn-info" href="<?php echo base_url().'c_petugas/produk_view/'.$cat->id; ?>">
                         <i class="fa fa-eye"></i>
                         Show
-                    </a>  
+                    </a> 
                     <a class="btn btn-warning" href="<?php echo base_url().'c_petugas/produk_edit/'.$cat->id; ?>">
                         <i class="fa fa-wrench"></i>
                         Edit
