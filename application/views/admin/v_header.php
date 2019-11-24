@@ -3,6 +3,8 @@
 
 <head>
     <title>Admin - Internal Catalog</title>
+    <!-- css style -->
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url().'assets/style.css' ?>">
     <!-- css bootstrap -->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url().'assets/css/bootstrap.css' ?>">
     <!-- css datatables -->
@@ -19,7 +21,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="<?php echo base_url().'c_admin'; ?>">i- Catalog </a>
+            <a class="navbar-brand" href="<?php echo base_url().'c_admin'; ?>"><img src="gambar/logo1.png" class="logo"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" arialabel="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

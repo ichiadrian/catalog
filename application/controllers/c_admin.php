@@ -91,7 +91,7 @@ class C_admin extends CI_Controller {
         }else{
             $data = array('upload_data' => $this->upload->data());
             // print_r($data);
-            return $data['upload_data']['file_name']; // return nama file jika berhasil uplaod
+            return $data['upload_data']['file_name']; // return nama file jika berhasil upload
         }
     }
 
