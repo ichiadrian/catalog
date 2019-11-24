@@ -21,7 +21,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="<?php echo base_url().'c_petugas'; ?>"><img src="gambar/logo1.png" class="logo"></a>
+            <a class="navbar-brand" href="<?php echo base_url().'c_petugas'; ?>"><img src="<?php echo site_url(); ?>gambar/logo1.png" class="logo"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" arialabel="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

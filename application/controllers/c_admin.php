@@ -3,8 +3,6 @@
 class C_admin extends CI_Controller {
 
     function __construct(){
-        define('PANJANG', 'mm');
-        define('BERAT', 'gram');
             parent::__construct();
             // cek session yang login, jika session status tidak sama dengan session admin_login,maka halaman akan di alihkan kembali ke halaman login.
                 if($this->session->userdata('status')!="admin_login"){

@@ -304,7 +304,9 @@ switch (ENVIRONMENT)
 	}
 
 	define('VIEWPATH', $view_folder.DIRECTORY_SEPARATOR);
-
+	
+	define('PANJANG', 'mm');
+	define('BERAT', 'gram');
 /*
  * --------------------------------------------------------------------
  * LOAD THE BOOTSTRAP FILE
