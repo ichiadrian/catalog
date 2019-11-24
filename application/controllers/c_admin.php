@@ -174,10 +174,10 @@ class C_admin extends CI_Controller {
         );
 
         $result = $this->m_data->update_data($where,$data,'catalog_list');
-        print_r($result);
-        echo "<br>";
-        print_r($this->input->post());
-        // redirect(site_url().'c_admin/produk');
+        // print_r($result);
+        // echo "<br>";
+        // print_r($this->input->post());
+        redirect(site_url().'c_admin/produk');
     }
 
     // Hapus Produk

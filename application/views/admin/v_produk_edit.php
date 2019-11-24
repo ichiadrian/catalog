@@ -17,7 +17,7 @@
                     <br /><br />
 
                     <form action="<?php echo site_url() . 'c_admin/produk_update' ?>" method="post" enctype="multipart/form-data">
-                        <input type="text" hidden value="<?php echo $data_catalog->id; ?>">
+                        <input type="text" hidden name="id" value="<?php echo $data_catalog->id; ?>">
                         <div class="form-group">
                             <label class="font-weight-bold" for="nama_barang">Nama Barang</label>
                             <input type="text" class="form-control" name="nama_barang" placeholder="Masukan Nama Barang" value="<?php echo $data_catalog->nama_barang; ?>" required="required">
