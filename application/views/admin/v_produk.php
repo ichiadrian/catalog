@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid mb-5">
 
     <div class="row mb-3">
         <div class="col d-flex justify-content-end">
@@ -6,7 +6,7 @@
         </div>
     </div>
 
-    <table class="table table-striped">
+    <table class="table table-striped table-datatable">
         <thead class="thead-dark">
             <tr>
                 <th class="text-center">No</th>
