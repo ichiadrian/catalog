@@ -1,6 +1,6 @@
 <div class="container">
     <!-- <div class="col-md-6 offset-3" > -->
-    <div class="card">
+    <div class="shadow card">
         <div class="card-header text-center">
             <h4>Tambah Petugas Baru</h4>
         </div>

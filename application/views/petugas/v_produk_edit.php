@@ -44,10 +44,10 @@
                         </div>
                         <div class="form-group">
                             <label class="font-weight-bold" for="gambar">Gambar</label>
-                            <input type="file" class="form-control " accept="image/*" id="gambar" name="gambar" value="<?php echo $data_catalog->gambar; ?>">
+                            <input type="file" class="form-control " accept="image/*" id="gambar" name="gambar" value="<?php echo $data_catalog->gambar1; ?>">
                         </div>
-                        <img id="showimage" src="<?php echo site_url().'gambar/produk_catalog/'.$data_catalog->gambar; ?>" style="max-width: 300px; max-height: 300px;" />
-                        <input type="text" name="gambarlama" hidden value="<?php echo $data_catalog->gambar; ?>" >
+                        <img id="showimage" src="<?php echo site_url().'gambar/produk_catalog/'.$data_catalog->gambar1; ?>" style="max-width: 300px; max-height: 300px;" />
+                        <input type="text" name="gambarlama" hidden value="<?php echo $data_catalog->gambar1; ?>" >
                         <br>
                         <input type="submit" class="btn btn-primary" value="Simpan">
                     </form>

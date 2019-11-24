@@ -1,6 +1,6 @@
 <div class="container">
     <!-- <div class="col-md-6 offset-3" > -->
-    <div class="card">
+    <div class="shadow card">
         <div class="card-header text-center">
             <h4>Edit Petugas</h4>
         </div>

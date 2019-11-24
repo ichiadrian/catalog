@@ -3,7 +3,7 @@
 
     <div class="row mx-5">
         <div class="col-4">
-            <img class="shadow" width="377px" height="292px" src="<?php echo site_url()."gambar/produk_catalog/".$data_catalog->gambar; ?>" alt="">
+            <img class="shadow" width="377px" height="292px" src="<?php echo site_url()."gambar/produk_catalog/".$data_catalog->gambar1; ?>" alt="">
         </div>
         <div class="shadow card col-7 p-3 ml-5">
             <div class="row">

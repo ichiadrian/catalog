@@ -3,7 +3,7 @@
     <div class="row justify-content-md-center">
         <div class="col-md-4">
             <br/><br/><br/>
-            <div class="card">
+            <div class="shadow card">
                 <div class="card-header text-center">
                     <h4>Ganti Password</h4>
                 </div>

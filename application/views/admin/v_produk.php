@@ -15,7 +15,8 @@
                 <th class="text-center">Lebar</th>
                 <th class="text-center">Tebal</th>
                 <th class="text-center">Berat</th>
-                <th class="text-center">Tanggal</th>
+                <th class="text-center">Tanggal Input</th>
+                <th class="text-center">Tanggal Edit</th>
                 <th class="text-center">Aksi</th>
             </tr>
         </thead>
@@ -39,6 +40,7 @@
                 <td class="text-center"><?php echo $cat->tebal.' '.PANJANG; ?> </td>
                 <td class="text-center"><?php echo $cat->berat.' '.BERAT; ?></td>
                 <td class="text-center"><?php echo date('d M Y', strtotime($cat->tanggal_input)); ?></td>
+                <td class="text-center"><?php echo date('d M Y', strtotime($cat->tanggal_edit)); ?></td>
                 <td class="text-center"> 
                     <a class="btn btn-info" href="<?php echo base_url().'c_admin/produk_view/'.$cat->id; ?>">
                         <i class="fa fa-eye"></i>

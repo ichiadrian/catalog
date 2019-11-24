@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container mb-5">
 
     <div class="row">
         <div class="col">
@@ -41,10 +41,21 @@
                             <input type="number" class="form-control" name="berat" placeholder="Masukan Berat" required="required">
                         </div>
                         <div class="form-group">
-                            <label class="font-weight-bold" for="gambar">Gambar</label>
-                            <input type="file" class="form-control " accept="image/*" id="gambar" name="gambar" required="required">
+                            <label class="font-weight-bold" for="gambar1">Gambar 1</label>
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" accept="image/*" id="gambar1" name="gambar1" required="required">
+                                <label class="custom-file-label" id="labelgambar1" for="gambar1">Choose file</label>
+                            </div>
                         </div>
-                        <img id="showimage" src="#" hidden style="max-width: 300px; max-height: 300px;"/>
+                        <div class="form-group">
+                            <label class="font-weight-bold" for="gambar2">Gambar 2</label>
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" accept="image/*" id="gambar2" name="gambar2" required="required">
+                                <label class="custom-file-label" id="labelgambar2" for="gambar2">Choose file</label>
+                            </div>
+                        </div>
+                        <img id="showimage1" src="#" hidden style="max-width: 300px; max-height: 300px;" />
+                        <img id="showimage2" src="#" hidden style="max-width: 300px; max-height: 300px;" />
                         <br>
                         <br>
                         <input type="submit" class="btn btn-primary" value="Simpan">
@@ -58,20 +69,25 @@
 </div>
 
 <script>
-    function readURL(input) {
+    function readURL(input, ids, labelid) {
         if (input.files && input.files[0]) {
             var reader = new FileReader();
-
+            
             reader.onload = function(e) {
-                $('#showimage').attr('src', e.target.result);
-                $('#showimage').removeAttr('hidden');
+                $('#' + ids).attr('src', e.target.result);
+                $('#'+ labelid).html(input.files && input.files.length ? input.files[0].name : '');
+                $('#' + ids).removeAttr('hidden');
             }
 
             reader.readAsDataURL(input.files[0]);
         }
     }
 
-    $("#gambar").change(function() {
-        readURL(this);
+    $("#gambar1").change(function() {
+        readURL(this, 'showimage1', 'labelgambar1');
+    });
+
+    $("#gambar2").change(function() {
+        readURL(this, 'showimage2', 'labelgambar2');
     });
 </script>

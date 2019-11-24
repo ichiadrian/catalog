@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="card">
+    <div class="shadow card">
         <div class="card-header text-center">
             <h4>Data Petugas</h4>
         </div>
