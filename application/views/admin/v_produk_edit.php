@@ -24,7 +24,7 @@
                         </div>
                         <div class="form-group">
                             <label class="font-weight-bold" for="deskripsi">Deskripsi</label>
-                            <input type="text" class="form-control" name="deskripsi" placeholder="Masukan Deskripsi Barang" value="<?php echo $data_catalog->deskripsi; ?>" required="required">
+                            <textarea type="text" class="form-control" name="deskripsi" placeholder="Masukan Deskripsi Barang" required="required"><?php echo $data_catalog->deskripsi; ?></textarea>
                         </div>
                         <div class="form-group">
                             <label class="font-weight-bold" for="tinggi">Tinggi</label>
@@ -46,8 +46,9 @@
                             <label class="font-weight-bold" for="gambar">Gambar</label>
                             <input type="file" class="form-control " accept="image/*" id="gambar" name="gambar" value="<?php echo $data_catalog->gambar; ?>">
                         </div>
-                        <img id="showimage" src="<?php echo site_url().'gambar/produk_catalog/'.$data_catalog->gambar; ?>"/>
-                        <input type="text" name="gambarlama" hidden value="<?php echo $data_catalog->gambar; ?>">
+                        <img id="showimage" src="<?php echo site_url().'gambar/produk_catalog/'.$data_catalog->gambar; ?>" style="max-width: 300px; max-height: 300px;" />
+                        <input type="text" name="gambarlama" hidden value="<?php echo $data_catalog->gambar; ?>" >
+                        <br>
                         <br>
                         <input type="submit" class="btn btn-primary" value="Simpan">
                     </form>

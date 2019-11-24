@@ -172,7 +172,7 @@ class C_admin extends CI_Controller {
         $where = array('id'=>$id);
        
         // upload gambar jika ada gambar baru
-        if ($_FILES['gambar']['tmp_name'] != "" ) $gambar = $this->input->post('gambarlama');
+        if ($_FILES['gambar']['tmp_name'] == "" ) $gambar = $this->input->post('gambarlama');
         else $gambar = $this->aksi_upload(); // return nama file
 
         $data = array(

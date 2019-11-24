@@ -40,6 +40,10 @@
                 <td class="text-center"><?php echo $cat->berat.' '.BERAT; ?></td>
                 <td class="text-center"><?php echo date('d M Y', strtotime($cat->tanggal_input)); ?></td>
                 <td class="text-center"> 
+                    <a class="btn btn-info" href="<?php echo base_url().'c_admin/produk_view/'.$cat->id; ?>">
+                        <i class="fa fa-eye"></i>
+                        Show
+                    </a> 
                     <a class="btn btn-warning" href="<?php echo base_url().'c_admin/produk_edit/'.$cat->id; ?>">
                         <i class="fa fa-wrench"></i>
                         Edit

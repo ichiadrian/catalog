@@ -22,7 +22,7 @@
                         </div>
                         <div class="form-group">
                             <label class="font-weight-bold" for="deskripsi">Deskripsi</label>
-                            <input type="text" class="form-control" name="deskripsi" placeholder="Masukan Deskripsi Barang" required="required">
+                            <textarea type="text" class="form-control" name="deskripsi" placeholder="Masukan Deskripsi Barang" required="required"></textarea>
                         </div>
                         <div class="form-group">
                             <label class="font-weight-bold" for="tinggi">Tinggi</label>
@@ -44,7 +44,8 @@
                             <label class="font-weight-bold" for="gambar">Gambar</label>
                             <input type="file" class="form-control " accept="image/*" id="gambar" name="gambar" required="required">
                         </div>
-                        <img id="showimage" src="#" hidden/>
+                        <img id="showimage" src="#" hidden style="max-width: 300px; max-height: 300px;"/>
+                        <br>
                         <br>
                         <input type="submit" class="btn btn-primary" value="Simpan">
                     </form>
