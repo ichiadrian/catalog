@@ -139,6 +139,7 @@ class C_admin extends CI_Controller {
         $lebar = $this->input->post('lebar');
         $tebal = $this->input->post('tebal');
         $berat = $this->input->post('berat');
+        $tonase = $this->input->post('tonase');
        
         // upload gambar
         $gambar1 = $this->aksi_upload('gambar1');
@@ -151,6 +152,7 @@ class C_admin extends CI_Controller {
             'lebar'=>$lebar,
             'tebal'=>$tebal,
             'berat'=>$berat,
+            'tonase'=>$tonase,
             'gambar1'=>$gambar1,
             'gambar2'=>$gambar2,
         );
@@ -168,6 +170,7 @@ class C_admin extends CI_Controller {
         $lebar = $this->input->post('lebar');
         $tebal = $this->input->post('tebal');
         $berat = $this->input->post('berat');
+        $tonase = $this->input->post('tonase');
 
         // cek data 
         $where = array('id'=>$id);
@@ -181,7 +184,7 @@ class C_admin extends CI_Controller {
         }
 
         // upload gambar jika ada gambar baru ============= GAMBAR 2
-        if ($_FILES['gambar1']['tmp_name'] == "" ) $gambar2 = $this->input->post('gambarlama2');
+        if ($_FILES['gambar2']['tmp_name'] == "" ) $gambar2 = $this->input->post('gambarlama2');
         else {
             $gambar2 = $this->aksi_upload('gambar2'); // return nama file
             unlink("gambar/produk_catalog/".$this->input->post('gambarlama2')); //delete file
@@ -195,6 +198,7 @@ class C_admin extends CI_Controller {
             'lebar'=>$lebar,
             'tebal'=>$tebal,
             'berat'=>$berat,
+            'tonase'=>$tonase,
             'gambar1'=>$gambar1,
             'gambar2'=>$gambar2,
         );

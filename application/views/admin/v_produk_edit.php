@@ -5,7 +5,7 @@
         <div class="col">
             <div class="card">
                 <div class="card-header">
-                    <h4 class="text-center">Tambah Produk</h4>
+                    <h4 class="text-center">Edit Produk</h4>
                 </div>
                 <div class="card-body">
 
@@ -20,27 +20,31 @@
                         <input type="text" hidden name="id" value="<?php echo $data_catalog->id; ?>">
                         <div class="form-group">
                             <label class="font-weight-bold" for="nama_barang">Nama Barang</label>
-                            <input type="text" class="form-control" name="nama_barang" placeholder="Masukan Nama Barang" value="<?php echo $data_catalog->nama_barang; ?>" required="required">
+                            <input type="text" class="form-control" id="nama_barang" name="nama_barang" placeholder="Masukan Nama Barang" value="<?php echo $data_catalog->nama_barang; ?>" required="required">
                         </div>
                         <div class="form-group">
                             <label class="font-weight-bold" for="deskripsi">Deskripsi</label>
-                            <textarea type="text" class="form-control" name="deskripsi" placeholder="Masukan Deskripsi Barang" required="required"><?php echo $data_catalog->deskripsi; ?></textarea>
+                            <textarea type="text" class="form-control" id="deskripsi" name="deskripsi" placeholder="Masukan Deskripsi Barang" required="required"><?php echo $data_catalog->deskripsi; ?></textarea>
                         </div>
                         <div class="form-group">
                             <label class="font-weight-bold" for="tinggi">Tinggi</label>
-                            <input type="number" class="form-control" name="tinggi" placeholder="Masukan Tinggi" value="<?php echo $data_catalog->tinggi; ?>" required="required">
+                            <input type="number" class="form-control" id="tinggi" name="tinggi" placeholder="Masukan Tinggi (<?php echo PANJANG; ?>)" value="<?php echo $data_catalog->tinggi; ?>" required="required">
                         </div>
                         <div class="form-group">
                             <label class="font-weight-bold" for="lebar">Lebar</label>
-                            <input type="number" class="form-control" name="lebar" placeholder="Masukan Lebar" value="<?php echo $data_catalog->lebar; ?>" required="required">
+                            <input type="number" class="form-control" id="lebar" name="lebar" placeholder="Masukan Lebar (<?php echo PANJANG; ?>)" value="<?php echo $data_catalog->lebar; ?>" required="required">
                         </div>
                         <div class="form-group">
-                            <label class="font-weight-bold" for="tebal">Tebal</label>
-                            <input type="number" class="form-control" name="tebal" placeholder="Masukan Tebal" value="<?php echo $data_catalog->tebal; ?>" required="required">
+                            <label class="font-weight-bold" for="tebal">Diameter</label>
+                            <input type="number" class="form-control" id="tebal" name="tebal" placeholder="Masukan Diameter (<?php echo PANJANG; ?>)" value="<?php echo $data_catalog->tebal; ?>" required="required">
                         </div>
                         <div class="form-group">
                             <label class="font-weight-bold" for="berat">Berat</label>
-                            <input type="number" class="form-control" name="berat" placeholder="Masukan Berat" value="<?php echo $data_catalog->berat; ?>" required="required">
+                            <input type="number" class="form-control" id="berat" name="berat" placeholder="Masukan Berat (<?php echo BERAT; ?>)" value="<?php echo $data_catalog->berat; ?>" required="required">
+                        </div>
+                        <div class="form-group">
+                            <label class="font-weight-bold" for="tonase">Tonase</label>
+                            <input type="number" class="form-control" id="tonase" name="tonase" placeholder="Masukan Tonase" value="<?php echo $data_catalog->tonase; ?>" required="required">
                         </div>
                         <div class="form-group">
                             <label class="font-weight-bold" for="gambar1">Gambar 1</label>

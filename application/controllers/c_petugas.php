@@ -68,14 +68,14 @@
 		}
 
 		// upload image
-		public function aksi_upload(){
+		public function aksi_upload($gambars){
 			$config['upload_path'] = './gambar/produk_catalog/';
 			$config['allowed_types'] = 'gif|jpg|png';
 		
 			$this->load->library('upload', $config);
 			print_r($this->input->post());
 	
-			if ( ! $this->upload->do_upload('gambar')){
+			if ( ! $this->upload->do_upload($gambars)){
 				$error = array('error' => $this->upload->display_errors());
 				// print_r($error);
 				return ""; // return string kosong kalo gagal upload
@@ -93,10 +93,12 @@
 			$lebar = $this->input->post('lebar');
 			$tebal = $this->input->post('tebal');
 			$berat = $this->input->post('berat');
-		   
+			$tonase = $this->input->post('tonase');
+		
 			// upload gambar
-			$gambar = $this->aksi_upload();
-	
+			$gambar1 = $this->aksi_upload('gambar1');
+			$gambar2 = $this->aksi_upload('gambar2');
+
 			$data = array(
 				'nama_barang'=>$nama_barang,
 				'deskripsi'=>$deskripsi,
@@ -104,7 +106,9 @@
 				'lebar'=>$lebar,
 				'tebal'=>$tebal,
 				'berat'=>$berat,
-				'gambar'=>$gambar,
+				'tonase'=>$tonase,
+				'gambar1'=>$gambar1,
+				'gambar2'=>$gambar2,
 			);
 	
 			$this->m_data->insert_data($data,'catalog_list');
@@ -120,14 +124,27 @@
 			$lebar = $this->input->post('lebar');
 			$tebal = $this->input->post('tebal');
 			$berat = $this->input->post('berat');
-	
+			$tonase = $this->input->post('tonase');
+
 			// cek data 
 			$where = array('id'=>$id);
-		   
-			// upload gambar jika ada gambar baru
-			if ($_FILES['gambar']['tmp_name'] == "" ) $gambar = $this->input->post('gambarlama');
-			else $gambar = $this->aksi_upload(); // return nama file
-	
+		
+			// upload gambar jika ada gambar baru ============= GAMBAR 1
+			if ($_FILES['gambar1']['tmp_name'] == "" ) $gambar1 = $this->input->post('gambarlama1');
+			else {
+				$gambar1 = $this->aksi_upload('gambar1'); // return nama file
+				unlink("gambar/produk_catalog/".$this->input->post('gambarlama1')); //delete file
+
+			}
+
+			// upload gambar jika ada gambar baru ============= GAMBAR 2
+			if ($_FILES['gambar2']['tmp_name'] == "" ) $gambar2 = $this->input->post('gambarlama2');
+			else {
+				$gambar2 = $this->aksi_upload('gambar2'); // return nama file
+				unlink("gambar/produk_catalog/".$this->input->post('gambarlama2')); //delete file
+			}
+			
+
 			$data = array(
 				'nama_barang'=>$nama_barang,
 				'deskripsi'=>$deskripsi,
@@ -135,7 +152,9 @@
 				'lebar'=>$lebar,
 				'tebal'=>$tebal,
 				'berat'=>$berat,
-				'gambar'=>$gambar,
+				'tonase'=>$tonase,
+				'gambar1'=>$gambar1,
+				'gambar2'=>$gambar2,
 			);
 	
 			$result = $this->m_data->update_data($where,$data,'catalog_list');

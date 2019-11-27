@@ -13,7 +13,7 @@
                 <th class="text-center">Nama Barang</th>
                 <th class="text-center">Tinggi</th>
                 <th class="text-center">Lebar</th>
-                <th class="text-center">Tebal</th>
+                <th class="text-center">Diameter</th>
                 <th class="text-center">Berat</th>
                 <th class="text-center">Tanggal</th>
                 <th class="text-center">Aksi</th>

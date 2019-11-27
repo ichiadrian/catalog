@@ -58,7 +58,7 @@
                     <td><?php echo $data_catalog->lebar . ' ' . PANJANG; ?></td>
                 </tr>
                 <tr>
-                    <td>Tebal</td>
+                    <td>Diameter</td>
                     <td>:</td>
                     <td><?php echo $data_catalog->tebal . ' ' . PANJANG; ?></td>
                 </tr>
@@ -66,6 +66,11 @@
                     <td>Berat</td>
                     <td>:</td>
                     <td><?php echo $data_catalog->berat . ' ' . BERAT; ?></td>
+                </tr>
+                <tr>
+                    <td>Tonase</td>
+                    <td>:</td>
+                    <td><?php echo $data_catalog->tonase; ?></td>
                 </tr>
 
             </table>

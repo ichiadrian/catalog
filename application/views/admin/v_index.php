@@ -21,7 +21,9 @@
         ?>
             <a class="shadow card col-2 m-2" style="text-decoration: none;" href="<?php echo site_url()."c_admin/produk_view/".$val->id; ?>">
                 <div class="card-body">
-                    <img class="d-flex justify-content-center" width="150px" height="100px" src="../gambar/produk_catalog/<?php echo $val->gambar1; ?>" alt="">
+                    <div class="d-flex justify-content-center">
+                        <img width="150px" height="100px" src="../gambar/produk_catalog/<?php echo $val->gambar1; ?>" alt="">
+                    </div>
                     <hr>
                     <h5 class="text-center text-truncate"><?php echo $val->nama_barang; ?></h5>
                 </div>
