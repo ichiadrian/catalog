@@ -35,7 +35,7 @@
             <div class="row">
                 <h3 class="col"><?php echo strtoupper($data_catalog->nama_barang); ?> </h3>
                 <div class="col d-flex justify-content-end">
-                    <a href="<?php echo site_url() . 'c_admin/produk' ?>" class=" btn btn-light btn-outline-dark pull-right">
+                    <a href="<?php echo site_url() . 'c_petugas/produk' ?>" class=" btn btn-light btn-outline-dark pull-right">
                         <i class="fa fa-arrow-left"></i>
                         Kembali
                     </a>

@@ -1,5 +1,12 @@
-.logo {
+img.logo {
     width: 100px;
     margin-right: 15px;
     margin-left: 5px;
+}
+.bg {
+    padding-top: 1.1rem;
+    padding-bottom: 1.1rem;
+    background-color: #343a40;
+    color: antiquewhite;
+    margin-top: 150px;
 }
