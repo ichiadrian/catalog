@@ -11,11 +11,11 @@
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="d-block w-100" src="<?php echo site_url() . "gambar/produk_catalog/" . $data_catalog->gambar1; ?>" alt="First slide">
+                        <img width="377px" height="292px" class="d-block w-100" src="<?php echo site_url() . "gambar/produk_catalog/" . $data_catalog->gambar1; ?>" alt="First slide">
                     </div>
                     <?php if ($data_catalog->gambar2 != null) { ?>
                         <div class="carousel-item">
-                            <img class="d-block w-100" src="<?php echo site_url() . "gambar/produk_catalog/" . $data_catalog->gambar2; ?>" alt="Second slide">
+                            <img width="377px" height="292px" class="d-block w-100" src="<?php echo site_url() . "gambar/produk_catalog/" . $data_catalog->gambar2; ?>" alt="Second slide">
                         </div>
                     <?php } ?>
                 </div>
