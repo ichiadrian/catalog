@@ -48,9 +48,9 @@
             <table width="25%" style="font-weight: bold">
 
                 <tr>
-                    <td>Tinggi</td>
+                    <td>Panjang</td>
                     <td>:</td>
-                    <td><?php echo $data_catalog->tinggi . ' ' . PANJANG; ?></td>
+                    <td><?php echo $data_catalog->panjang . ' ' . PANJANG; ?></td>
                 </tr>
                 <tr>
                     <td>Lebar</td>
@@ -58,9 +58,14 @@
                     <td><?php echo $data_catalog->lebar . ' ' . PANJANG; ?></td>
                 </tr>
                 <tr>
-                    <td>Diameter</td>
+                    <td>Tebal</td>
                     <td>:</td>
                     <td><?php echo $data_catalog->tebal . ' ' . PANJANG; ?></td>
+                </tr>
+                <tr>
+                    <td>Diameter</td>
+                    <td>:</td>
+                    <td><?php echo $data_catalog->diameter . ' ' . PANJANG; ?></td>
                 </tr>
                 <tr>
                     <td>Berat</td>
@@ -71,6 +76,11 @@
                     <td>Tonase</td>
                     <td>:</td>
                     <td><?php echo $data_catalog->tonase; ?></td>
+                </tr>
+                <tr>
+                    <td>Kadar</td>
+                    <td>:</td>
+                    <td><?php echo number_format($data_catalog->kadar, 2); ?> K</td>
                 </tr>
 
             </table>

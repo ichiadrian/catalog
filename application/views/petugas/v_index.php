@@ -52,14 +52,14 @@
     </div>
 </div>
 
-<div class="row d-flex justify-content-center">
+<div class="row d-flex justify-content-center mb-5">
     <!-- <div class="col-3 d-flex justify-content-center"> -->
 
     <?php
             foreach ($catalog as $key => $val) {
                     
         ?>
-    <a class="card col-2 m-2" style="text-decoration: none;"
+    <a class="card col-2 m-2 mb-3" style="text-decoration: none;"
         href="<?php echo site_url()."c_petugas/produk_view/".$val->id; ?>">
         <div class="card-body">
             <div class="d-flex justify-content-center">

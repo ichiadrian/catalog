@@ -1,7 +1,7 @@
 <div class="container mb-5">
 
-    <div class="row">
-        <div class="col">
+    <div class="row mb-5">
+        <div class="col mb-5">
             <div class="card">
                 <div class="card-header">
                     <h4 class="text-center">Tambah Produk</h4>
@@ -25,16 +25,20 @@
                             <textarea type="text" class="form-control" id="deskripsi" name="deskripsi" placeholder="Masukan Deskripsi Barang" required="required"></textarea>
                         </div>
                         <div class="form-group">
-                            <label class="font-weight-bold" for="tinggi">Tinggi</label>
-                            <input type="number" class="form-control" id="tinggi" name="tinggi" placeholder="Masukan Tinggi (<?php echo PANJANG; ?>)" required="required">
+                            <label class="font-weight-bold" for="panjang">Panjang</label>
+                            <input type="number" class="form-control" id="panjang" name="panjang" placeholder="Masukan Panjang (<?php echo PANJANG; ?>)" required="required">
                         </div>
                         <div class="form-group">
                             <label class="font-weight-bold" for="lebar">Lebar</label>
                             <input type="number" class="form-control" id="lebar" name="lebar" placeholder="Masukan Lebar (<?php echo PANJANG; ?>)" required="required">
                         </div>
                         <div class="form-group">
-                            <label class="font-weight-bold" for="tebal">Diameter</label>
-                            <input type="number" class="form-control" id="tebal" name="tebal" placeholder="Masukan Diameter (<?php echo PANJANG; ?>)" required="required">
+                            <label class="font-weight-bold" for="tebal">Tebal</label>
+                            <input type="number" class="form-control" id="tebal" name="tebal" placeholder="Masukan Tebal (<?php echo PANJANG; ?>)" required="required">
+                        </div>
+                        <div class="form-group">
+                            <label class="font-weight-bold" for="diameter">Diameter</label>
+                            <input type="number" class="form-control" id="diameter" name="diameter" placeholder="Masukan Diameter (<?php echo PANJANG; ?>)" required="required">
                         </div>
                         <div class="form-group">
                             <label class="font-weight-bold" for="berat">Berat</label>
@@ -43,6 +47,10 @@
                         <div class="form-group">
                             <label class="font-weight-bold" for="tonase">Tonase</label>
                             <input type="number" class="form-control" id="tonase" name="tonase" placeholder="Masukan Tonase" required="required">
+                        </div>
+                        <div class="form-group">
+                            <label class="font-weight-bold" for="kadar">Kadar</label>
+                            <input type="number" class="form-control" id="kadar" step=".01" name="kadar" placeholder="Masukan Kadar Karat" required="required">
                         </div>
                         <div class="form-group">
                             <label class="font-weight-bold" for="gambar1">Gambar 1</label>

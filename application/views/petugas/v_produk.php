@@ -11,7 +11,7 @@
             <tr>
                 <th class="text-center">No</th>
                 <th class="text-center">Nama Barang</th>
-                <th class="text-center">Tinggi</th>
+                <th class="text-center">Panjang</th>
                 <th class="text-center">Lebar</th>
                 <th class="text-center">Diameter</th>
                 <th class="text-center">Berat</th>
@@ -34,7 +34,7 @@
             <tr>
                 <td class="text-center"><?php echo $index+1; ?></td>
                 <td class="text-center"><?php echo $cat->nama_barang ?></td>
-                <td class="text-center"><?php echo $cat->tinggi.' '.PANJANG; ?></td>
+                <td class="text-center"><?php echo $cat->panjang.' '.PANJANG; ?></td>
                 <td class="text-center"><?php echo $cat->lebar.' '.PANJANG; ?> </td>
                 <td class="text-center"><?php echo $cat->tebal.' '.PANJANG; ?> </td>
                 <td class="text-center"><?php echo $cat->berat.' '.BERAT; ?></td>

@@ -89,11 +89,13 @@
 		function produk_tambah_aksi(){
 			$nama_barang = $this->input->post('nama_barang');
 			$deskripsi = $this->input->post('deskripsi');
-			$tinggi = $this->input->post('tinggi');
+			$panjang = $this->input->post('panjang');
 			$lebar = $this->input->post('lebar');
 			$tebal = $this->input->post('tebal');
+			$diameter = $this->input->post('diameter');
 			$berat = $this->input->post('berat');
 			$tonase = $this->input->post('tonase');
+			$kadar = $this->input->post('kadar');
 		
 			// upload gambar
 			$gambar1 = $this->aksi_upload('gambar1');
@@ -102,11 +104,13 @@
 			$data = array(
 				'nama_barang'=>$nama_barang,
 				'deskripsi'=>$deskripsi,
-				'tinggi'=>$tinggi,
+				'panjang'=>$panjang,
 				'lebar'=>$lebar,
 				'tebal'=>$tebal,
+				'diameter'=>$diameter,
 				'berat'=>$berat,
 				'tonase'=>$tonase,
+				'kadar'=>$kadar,
 				'gambar1'=>$gambar1,
 				'gambar2'=>$gambar2,
 			);
@@ -120,11 +124,13 @@
 			$id = $this->input->post('id');
 			$nama_barang = $this->input->post('nama_barang');
 			$deskripsi = $this->input->post('deskripsi');
-			$tinggi = $this->input->post('tinggi');
+			$panjang = $this->input->post('panjang');
 			$lebar = $this->input->post('lebar');
 			$tebal = $this->input->post('tebal');
+			$diameter = $this->input->post('diameter');
 			$berat = $this->input->post('berat');
 			$tonase = $this->input->post('tonase');
+			$kadar = $this->input->post('kadar');
 
 			// cek data 
 			$where = array('id'=>$id);
@@ -148,11 +154,13 @@
 			$data = array(
 				'nama_barang'=>$nama_barang,
 				'deskripsi'=>$deskripsi,
-				'tinggi'=>$tinggi,
+				'panjang'=>$panjang,
 				'lebar'=>$lebar,
 				'tebal'=>$tebal,
+				'diameter'=>$diameter,
 				'berat'=>$berat,
 				'tonase'=>$tonase,
+				'kadar'=>$kadar,
 				'gambar1'=>$gambar1,
 				'gambar2'=>$gambar2,
 			);
