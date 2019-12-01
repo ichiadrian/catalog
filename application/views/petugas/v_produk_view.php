@@ -50,27 +50,27 @@
                 <tr>
                     <td>Panjang</td>
                     <td>:</td>
-                    <td><?php echo $data_catalog->panjang . ' ' . PANJANG; ?></td>
+                    <td><?php echo number_format($data_catalog->panjang, 2) . ' ' . PANJANG; ?></td>
                 </tr>
                 <tr>
                     <td>Lebar</td>
                     <td>:</td>
-                    <td><?php echo $data_catalog->lebar . ' ' . PANJANG; ?></td>
+                    <td><?php echo number_format ($data_catalog->lebar, 2) . ' ' . PANJANG; ?></td>
                 </tr>
                 <tr>
                     <td>Tebal</td>
                     <td>:</td>
-                    <td><?php echo $data_catalog->tebal . ' ' . PANJANG; ?></td>
+                    <td><?php echo number_format ($data_catalog->tebal, 2) . ' ' . PANJANG; ?></td>
                 </tr>
                 <tr>
                     <td>Diameter</td>
                     <td>:</td>
-                    <td><?php echo $data_catalog->diameter . ' ' . PANJANG; ?></td>
+                    <td><?php echo number_format($data_catalog->diameter, 2) . ' ' . PANJANG; ?></td>
                 </tr>
                 <tr>
                     <td>Berat</td>
                     <td>:</td>
-                    <td><?php echo $data_catalog->berat . ' ' . BERAT; ?></td>
+                    <td><?php echo number_format($data_catalog->berat, 2) . ' ' . BERAT; ?></td>
                 </tr>
                 <tr>
                     <td>Tonase</td>

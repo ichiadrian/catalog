@@ -49,7 +49,7 @@
                     </li>
                 </ul>
 
-                <span class="navbar-text mr-3 text-center">Halo, <?php echo $this->session->userdata('username'); ?> [admin]</span>
+                <span class="navbar-text mr-3 text-center">Halo, <?php echo $this->session->userdata('username'); ?> [Petugas]</span>
                 <a href="<?php echo base_url().'c_petugas/logout' ?>" class="btn btn-outline-light ml-1"><i class="fa fa-power-off"></i> KELUAR</a>
             </div>
         </div>

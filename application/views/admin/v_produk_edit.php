@@ -28,23 +28,23 @@
                         </div>
                         <div class="form-group">
                             <label class="font-weight-bold" for="panjang">Panjang</label>
-                            <input type="number" class="form-control" id="panjang" name="panjang" placeholder="Masukan Panjang (<?php echo PANJANG; ?>)" value="<?php echo $data_catalog->panjang; ?>" required="required">
+                            <input type="number" class="form-control" step=".01" id="panjang" name="panjang" placeholder="Masukan Panjang (<?php echo PANJANG; ?>)" value="<?php echo number_format($data_catalog->panjang, 2); ?>" required="required">
                         </div>
                         <div class="form-group">
                             <label class="font-weight-bold" for="lebar">Lebar</label>
-                            <input type="number" class="form-control" id="lebar" name="lebar" placeholder="Masukan Lebar (<?php echo PANJANG; ?>)" value="<?php echo $data_catalog->lebar; ?>" required="required">
+                            <input type="number" class="form-control" step=".01" id="lebar" name="lebar" placeholder="Masukan Lebar (<?php echo PANJANG; ?>)" value="<?php echo number_format($data_catalog->lebar, 2); ?>" required="required">
                         </div>
                         <div class="form-group">
                             <label class="font-weight-bold" for="tebal">Tebal</label>
-                            <input type="number" class="form-control" id="tebal" name="tebal" placeholder="Masukan Tebal (<?php echo PANJANG; ?>)" value="<?php echo $data_catalog->tebal; ?>" required="required">
+                            <input type="number" class="form-control" step=".01" id="tebal" name="tebal" placeholder="Masukan Tebal (<?php echo PANJANG; ?>)" value="<?php echo number_format($data_catalog->tebal, 2); ?>" required="required">
                         </div>
                         <div class="form-group">
                             <label class="font-weight-bold" for="diameter">Diameter</label>
-                            <input type="number" class="form-control" id="diameter" name="diameter" placeholder="Masukan Diameter (<?php echo PANJANG; ?>)" value="<?php echo $data_catalog->diameter; ?>" required="required">
+                            <input type="number" class="form-control" step=".01" id="diameter" name="diameter" placeholder="Masukan Diameter (<?php echo PANJANG; ?>)" value="<?php echo number_format($data_catalog->diameter, 2); ?>" required="required">
                         </div>
                         <div class="form-group">
                             <label class="font-weight-bold" for="berat">Berat</label>
-                            <input type="number" class="form-control" id="berat" name="berat" placeholder="Masukan Berat (<?php echo BERAT; ?>)" value="<?php echo $data_catalog->berat; ?>" required="required">
+                            <input type="number" class="form-control" step=".01" id="berat" name="berat" placeholder="Masukan Berat (<?php echo BERAT; ?>)" value="<?php echo number_format($data_catalog->berat, 2); ?>" required="required">
                         </div>
                         <div class="form-group">
                             <label class="font-weight-bold" for="tonase">Tonase</label>

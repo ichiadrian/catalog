@@ -26,27 +26,27 @@
                         </div>
                         <div class="form-group">
                             <label class="font-weight-bold" for="panjang">Panjang</label>
-                            <input type="number" class="form-control" id="panjang" name="panjang" placeholder="Masukan Panjang (<?php echo PANJANG; ?>)" required="required">
+                            <input type="number" class="form-control" step=".01" id="panjang" name="panjang" placeholder="Masukan Panjang (<?php echo PANJANG; ?>)" required="required">
                         </div>
                         <div class="form-group">
                             <label class="font-weight-bold" for="lebar">Lebar</label>
-                            <input type="number" class="form-control" id="lebar" name="lebar" placeholder="Masukan Lebar (<?php echo PANJANG; ?>)" required="required">
+                            <input type="number" class="form-control" step=".01" id="lebar" name="lebar" placeholder="Masukan Lebar (<?php echo PANJANG; ?>)" required="required">
                         </div>
                         <div class="form-group">
                             <label class="font-weight-bold" for="tebal">Tebal</label>
-                            <input type="number" class="form-control" id="tebal" name="tebal" placeholder="Masukan Tebal (<?php echo PANJANG; ?>)" required="required">
+                            <input type="number" class="form-control" step=".01" id="tebal" name="tebal" placeholder="Masukan Tebal (<?php echo PANJANG; ?>)" required="required">
                         </div>
                         <div class="form-group">
                             <label class="font-weight-bold" for="diameter">Diameter</label>
-                            <input type="number" class="form-control" id="diameter" name="diameter" placeholder="Masukan Diameter (<?php echo PANJANG; ?>)" required="required">
+                            <input type="number" class="form-control" step=".01"  id="diameter" name="diameter" placeholder="Masukan Diameter (<?php echo PANJANG; ?>)" required="required">
                         </div>
                         <div class="form-group">
                             <label class="font-weight-bold" for="berat">Berat</label>
-                            <input type="number" class="form-control" id="berat" name="berat" placeholder="Masukan Berat (<?php echo BERAT; ?>)" required="required">
+                            <input type="number" class="form-control" step=".01" id="berat" name="berat" placeholder="Masukan Berat (<?php echo BERAT; ?>)" required="required">
                         </div>
                         <div class="form-group">
                             <label class="font-weight-bold" for="tonase">Tonase</label>
-                            <input type="number" class="form-control" id="tonase" name="tonase" placeholder="Masukan Tonase" required="required">
+                            <input type="number" class="form-control" step=".01" id="tonase" name="tonase" placeholder="Masukan Tonase" required="required">
                         </div>
                         <div class="form-group">
                             <label class="font-weight-bold" for="kadar">Kadar</label>

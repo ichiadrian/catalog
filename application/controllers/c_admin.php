@@ -23,7 +23,8 @@ class C_admin extends CI_Controller {
 
     //untuk menampilkan ke halaman produk 
     function produk(){
-        $data['catalog'] = $this->m_data->get_data('catalog_list')->result();
+        $query = "SELECT * FROM catalog_list ORDER BY TANGGAL_INPUT DESC";
+        $data['catalog'] = $this->m_data->raw_query($query)->result();
         $this->load->view('admin/v_header');
         $this->load->view('admin/v_produk', $data);
         $this->load->view('admin/v_footer');
