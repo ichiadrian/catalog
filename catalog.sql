@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 01 Des 2019 pada 13.55
+-- Waktu pembuatan: 01 Des 2019 pada 14.04
 -- Versi server: 10.1.38-MariaDB
 -- Versi PHP: 7.3.3
 
@@ -21,6 +21,25 @@ SET time_zone = "+00:00";
 --
 -- Database: `catalog`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `admin`
+--
+
+CREATE TABLE `admin` (
+  `id` int(11) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `admin`
+--
+
+INSERT INTO `admin` (`id`, `username`, `password`) VALUES
+(1, 'admin', '0192023a7bbd73250516f069df18b500');
 
 -- --------------------------------------------------------
 
@@ -61,11 +80,40 @@ INSERT INTO `catalog_list` (`id`, `nama_barang`, `gambar1`, `gambar2`, `deskrips
 (15, 'Test Data Baru', 'Stokes-Hello-Kitty2-1200.jpg', 'brick-clipart-printable-3.jpg', 'Lorem Ipsum', 50, 50, 50, 50, 99.99, 12, 12.02, '2019-11-30 14:25:10', '2019-11-30 15:14:20'),
 (16, 'Data ke-10', '9e86810d85ef6a0793dfa854dc33cef7.jpg', '35958.png', 'LoReM IbSum', 32, 65, 98, 47, 99.99, 124, 5.12, '2019-11-30 14:36:00', '2019-11-30 14:39:00'),
 (18, 'baru baru', 'medali22.jpg', 'emas4.jpg', '12', 12.1, 12.12, 12.12, 12.12, 12.12, 123, 99.99, '2019-12-01 12:08:14', '2019-12-01 12:18:36'),
-(19, 'emas', 'emas5.jpg', 'medali23.jpg', 'emas batang', 20.01, 10.1, 10.1, 10.1, 100.05, 120, 99.99, '2019-12-01 12:22:11', '2019-12-01 12:53:11');
+(19, 'emas', 'emas5.jpg', 'medali23.jpg', 'emas batang', 20.01, 10.1, 10.1, 10.1, 100.05, 120, 99.99, '2019-12-01 12:22:11', '2019-12-01 12:53:11'),
+(20, 'Medali', 'medali24.jpg', 'emas6.jpg', '12', 12.12, 12.12, 12.12, 0.13, 12.99, 123, 99.99, '2019-12-01 12:56:48', '2019-12-01 12:56:48');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `petugas`
+--
+
+CREATE TABLE `petugas` (
+  `id` int(11) NOT NULL,
+  `nama` varchar(255) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `petugas`
+--
+
+INSERT INTO `petugas` (`id`, `nama`, `username`, `password`) VALUES
+(2, 'Ryan Septianto', 'ryan', '827ccb0eea8a706c4c34a16891f84e7b'),
+(3, 'wahyu', 'wahyu', '827ccb0eea8a706c4c34a16891f84e7b'),
+(5, 'Armand Iskandarsyah', 'armand', 'd138f04ec7016a21acc2ae19ddc708bc');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indeks untuk tabel `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indeks untuk tabel `catalog_list`
@@ -74,14 +122,32 @@ ALTER TABLE `catalog_list`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indeks untuk tabel `petugas`
+--
+ALTER TABLE `petugas`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT untuk tabel yang dibuang
 --
+
+--
+-- AUTO_INCREMENT untuk tabel `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT untuk tabel `catalog_list`
 --
 ALTER TABLE `catalog_list`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+
+--
+-- AUTO_INCREMENT untuk tabel `petugas`
+--
+ALTER TABLE `petugas`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
